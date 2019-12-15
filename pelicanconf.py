@@ -20,13 +20,13 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (
+# LINKS = (("You can add links in your config file", "#"), ("Another social link", "#"))
+
+# Social widget
+SOCIAL = (
     ("GitHub", "http://github.com/vogt4nick"),
     ("LinkedIn", "http://linkedin.com/nicholas-vogt/"),
 )
-
-# Social widget
-SOCIAL = (("You can add links in your config file", "#"), ("Another social link", "#"))
 
 DEFAULT_PAGINATION = 3
 
