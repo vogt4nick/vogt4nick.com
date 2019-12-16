@@ -3,14 +3,13 @@
 from __future__ import unicode_literals
 
 AUTHOR = "Nick Vogt"
-SITENAME = "vogt4nick"
-SITEURL = "vogt4nick.com"
-
+SITENAME = "Hi, I'm Nick"
+SITEURL = "http://dev.vogt4nick.com"
+# SITEURL = "."
 PATH = "content"
-
 TIMEZONE = "America/Detroit"
-
 DEFAULT_LANG = "en"
+
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -24,11 +23,20 @@ AUTHOR_FEED_RSS = None
 
 # Social widget
 SOCIAL = (
-    ("GitHub", "http://github.com/vogt4nick"),
-    ("LinkedIn", "http://linkedin.com/nicholas-vogt/"),
+    ("github", "http://github.com/vogt4nick"),
+    ("linkedin", "http://linkedin.com/nicholas-vogt/"),
 )
 
 DEFAULT_PAGINATION = 3
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
+
+# theme-based globals
+THEME = "themes/attila"
+DISPLAY_PAGES_ON_MENU = True
+# HEADER_COLOR = 'black'
+SITESUBTITLE = "I like math, programming, and flannel."
+SHOW_SITESUBTITLE_IN_HTML = True
+# COLOR_SCHEME_CSS = 'monokai.css'
+HEADER_COVER = "theme/images/about-banner.jpg"
