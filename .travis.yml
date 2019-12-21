@@ -9,24 +9,23 @@ before_install:
 script:
   - pelican -o output content
 deploy:
-  provider: s3
-  bucket: dev.vogt4nick.com
-  skip_cleanup: true
-  region: us-east-1
-  local_dir: output
-  default_text_charset: utf-8
-  cache_control: no-cache
-  acl: public_read
-  on:
-    branch: dev.vogt4nick.com
-deploy:
-  provider: s3
-  bucket: vogt4nick.com
-  skip_cleanup: true
-  region: us-east-1
-  local_dir: output
-  default_text_charset: utf-8
-  cache_control: no-cache
-  acl: public_read
-  on:
-    branch: vogt4nick.com
+  - provider: s3
+    bucket: dev.vogt4nick.com
+    skip_cleanup: true
+    region: us-east-1
+    local_dir: output
+    default_text_charset: utf-8
+    cache_control: no-cache
+    acl: public_read
+    on:
+      branch: dev.vogt4nick.com
+  - provider: s3
+    bucket: vogt4nick.com
+    skip_cleanup: true
+    region: us-east-1
+    local_dir: output
+    default_text_charset: utf-8
+    cache_control: no-cache
+    acl: public_read
+    on:
+      branch: vogt4nick.com
