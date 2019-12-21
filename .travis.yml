@@ -14,6 +14,5 @@ deploy:
   local_dir: output
   default_text_charset: utf-8
   cache_control: no-cache
-  branches:
-    only:
-      - master
+  on:
+    branch: master
