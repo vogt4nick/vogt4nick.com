@@ -1,5 +1,7 @@
 language: python
 python: "3.7"
+env:
+  - SITEURL=$TRAVIS_BRANCH
 before_install:
   - python --version
   - pip install --upgrade pip
@@ -16,4 +18,15 @@ deploy:
   cache_control: no-cache
   acl: public_read
   on:
-    branch: master
+    branch: dev.vogt4nick.com
+deploy:
+  provider: s3
+  bucket: vogt4nick.com
+  skip_cleanup: true
+  region: us-east-1
+  local_dir: output
+  default_text_charset: utf-8
+  cache_control: no-cache
+  acl: public_read
+  on:
+    branch: vogt4nick.com
