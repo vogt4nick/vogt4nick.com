@@ -1,0 +1,21 @@
+language: python
+python: "3.7"
+before_install:
+  - python --version
+  - pip install --upgrade pip
+  - pip install -r requirements.txt
+install:
+  - pip install .
+script:
+  - pelican -o output content
+deploy:
+  provider: s3
+  bucket: dev.vogt4nick.com
+  skip_cleanup: true
+  region: us-east-1
+  local_dir: output
+  default_text_charset: utf-8
+  cache_control: no-cache
+  branches:
+    only:
+      - master
