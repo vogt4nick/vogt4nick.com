@@ -2,10 +2,11 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+import os
+
 AUTHOR = "Nick Vogt"
 SITENAME = "Hi, I'm Nick"
-SITEURL = "http://dev.vogt4nick.com"
-# SITEURL = "."
+SITEURL = os.getenv("SITEURL")
 PATH = "content"
 TIMEZONE = "America/Detroit"
 DEFAULT_LANG = "en"
@@ -35,8 +36,6 @@ DEFAULT_PAGINATION = 3
 # theme-based globals
 THEME = "themes/attila"
 DISPLAY_PAGES_ON_MENU = True
-# HEADER_COLOR = 'black'
 SITESUBTITLE = "I like math, programming, and flannel."
 SHOW_SITESUBTITLE_IN_HTML = True
-# COLOR_SCHEME_CSS = 'monokai.css'
 HEADER_COVER = "theme/images/about-banner.jpg"
