@@ -4,8 +4,6 @@ before_install:
   - python --version
   - pip install --upgrade pip
   - pip install -r requirements.txt
-install:
-  - pip install .
 script:
   - pelican -o output content
 deploy:
